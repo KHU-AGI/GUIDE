@@ -1,12 +1,8 @@
-import lpips
 import os
 import click
 
 import numpy as np
 
-from PIL import Image
-from torchvision import transforms
-from arcface import IDLoss
 from glob import glob
 from id_sim import IDSimNet
 

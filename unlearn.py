@@ -302,7 +302,7 @@ def unlearn(*args, **kwargs):
             loss_global = torch.tensor(0.0, device=device)
             for _ in range(loss_global_batch):
                 z_rg = torch.randn(1, 512, device=device)
-                w_rg = generator.mapping(z_rg, conditioning_params, truncation_psi=truncation_psi, truncation_cutoff=truncation_cutoff)\
+                w_rg = generator.mapping(z_rg, conditioning_params, truncation_psi=truncation_psi, truncation_cutoff=truncation_cutoff)
                 
                 img_u = generator.synthesis(w_rg, camera_params)["image"]
                 img_target = g_source.synthesis(w_rg, camera_params)["image"]
