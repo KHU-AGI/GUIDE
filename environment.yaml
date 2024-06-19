@@ -1,0 +1,11 @@
+name: guide
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - pytorch=2.1.0
+  - torchvision=0.16.0
+  - pytorch-cuda=11.8
+  - pip:
+    - ninja==1.11.1

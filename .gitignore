@@ -1,0 +1,12 @@
+__pycache__/
+experiments/
+fake_images/
+
+*.pt
+*.pth
+*.pkl
+*.log
+*.out
+*.err
+*.sh
+*.npy
