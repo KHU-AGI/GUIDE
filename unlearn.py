@@ -11,13 +11,12 @@ import lpips
 import torch.nn.functional as F
 import numpy as np
 
-from torch import nn, optim
+from torch import optim
 from tqdm import tqdm
 from training.triplane import TriPlaneGenerator
 from camera_utils import LookAtPoseSampler, FOV_to_intrinsics
 from torch_utils.misc import copy_params_and_buffers
 from PIL import Image
-from torchvision import transforms
 from arcface import IDLoss
 
 def tensor_to_image(t):
