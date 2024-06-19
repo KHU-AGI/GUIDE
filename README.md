@@ -26,11 +26,12 @@ conda activate guide
 ## Files to Run Code
 |Filename|Description|
 |-|-|
-|ffhqrebalanced512-128.pkl|Pretrained weights of EG3D network|
-|w_avg_ffhqrebalanced512-128.pt|Average latent code computed from pretrained EG3D network|
-|model_ir_se50.pth|Pretrained weights of ArcFace network to compute identity loss|
-|encoder_FFHQ.pt|Pretrained weights of GOAEncoder for 3D GAN inversion|
-|CurricularFace_Backbone.pth|Pretrained weights of CurricularFace network to compute identity similarity|
+|ffhqrebalanced512-128.pkl|Pretrained weights of EG3D network.|
+|w_avg_ffhqrebalanced512-128.pt|Average latent code computed from pretrained EG3D network.|
+|model_ir_se50.pth|Pretrained weights of ArcFace network to compute identity loss.|
+|encoder_FFHQ.pt|Pretrained weights of GOAEncoder for 3D GAN inversion.|
+|CurricularFace_Backbone.pth|Pretrained weights of CurricularFace network to compute identity similarity.|
+|ffhq_real_feat.npy|Statistics of Inception-v3 feature to easily compute ΔFID<sub>real</sub>.|
 
 To run code, please download all of files via [Google Drive](https://drive.google.com/drive/folders/1tl7zLPZgwOpa6xWmRsjz7LMrysfSbh_8?usp=drive_link).
 
@@ -60,7 +61,7 @@ python unlearn.py --exp guide \
 It takes about 15 minutes in a single 3090 GPU.
 ## Erase in the wild identities
 If you want to erasure in the wild identities, please preprocess the images via [Deep3DFaceRecon](https://github.com/sicxu/Deep3DFaceRecon_pytorch).  
-Otherwise, both the inversion encoder and pretrained generatior can't not recognize them correctly. 
+Otherwise, both the inversion encoder and pretrained generatior can't recognize them correctly. 
 # Evaluation
 Evaluation on identity erasure:
 ```bash
